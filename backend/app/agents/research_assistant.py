@@ -7,7 +7,7 @@ from langchain_core.runnables import Runnable
 
 # 1. Initialize the LLM (Using ChatOllama is better)
 llm = ChatGroq(
-    model="llama3.1-8b-instant" # <--- CHANGED (use a specific model)
+    model="llama-3.1-8b-instant" # <--- CHANGED (use a specific model)
 )
 
 # 2. Create a prompt
