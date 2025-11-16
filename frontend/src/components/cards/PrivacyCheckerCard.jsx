@@ -15,7 +15,7 @@ export default function PrivacyCheckerCard() {
     if (!text.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:8000/privacy', { text });
+      const res = await axios.post('https://ai-health-assistant-cu2e.onrender.com/privacy', { text });
       setReport(res.data);
     } catch {
       setReport({ error: 'Backend error' });

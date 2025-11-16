@@ -16,7 +16,7 @@ export default function DrugInteractionCard() {
     if (!drug1.trim() || !drug2.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:8000/drug-check', { drug1, drug2 });
+      const res = await axios.post('https://ai-health-assistant-cu2e.onrender.com/drug-check', { drug1, drug2 });
       setInfo(res.data.interaction);
     } catch {
       setInfo('Unable to fetch interaction data.');

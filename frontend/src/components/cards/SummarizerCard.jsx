@@ -15,7 +15,7 @@ export default function SummarizerCard() {
     if (!text.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:8000/summarize', { text });
+      const res = await axios.post('https://ai-health-assistant-cu2e.onrender.com/summarize', { text });
       setSummary(res.data.summary);
     } catch {
       setSummary('Error: Could not connect to backend.');

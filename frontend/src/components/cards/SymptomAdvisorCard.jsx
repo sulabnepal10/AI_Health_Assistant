@@ -21,7 +21,7 @@ export default function SymptomAdvisorCard() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:8000/symptoms', {
+      const res = await axios.post('https://ai-health-assistant-cu2e.onrender.com/symptoms', {
         messages: updated,
       });
       setMessages([...updated, { role: 'assistant', content: res.data.response }]);

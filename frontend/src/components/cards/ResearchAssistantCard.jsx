@@ -16,7 +16,7 @@ export default function ResearchAssistantCard() {
     if (!query.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:8000/papers', { query });
+      const res = await axios.post('https://ai-health-assistant-cu2e.onrender.com/papers', { query });
       setResult(res.data.response);
     } catch {
       setResult('Error contacting the backend.');
