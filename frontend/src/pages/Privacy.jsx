@@ -5,7 +5,6 @@ export default function Privacy() {
     return (
         <>
             <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-white">
-                {/* Hero */}
                 <section className="bg-gradient-to-br from-red-600 to-rose-700 py-20 text-white">
                     <div className="max-w-5xl mx-auto px-4 text-center">
                         <Shield className="w-16 h-16 mx-auto mb-4" />

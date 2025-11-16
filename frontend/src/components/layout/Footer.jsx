@@ -4,7 +4,6 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Brand */}
         <div>
           <h3 className="text-2xl font-bold text-indigo-400 mb-3">
             AI Health Assistant
@@ -14,7 +13,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h4 className="font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm">
@@ -25,16 +23,14 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
           <p className="text-sm flex items-center gap-2">
             <Mail className="w-4 h-4" />
-            support@aihealth.com
+            sulabnepal10@gmail.com
           </p>
         </div>
 
-        {/* Social */}
         <div>
           <h4 className="font-semibold mb-3">Follow Us</h4>
           <div className="flex gap-4">

@@ -10,7 +10,7 @@ export default function ResearchAssistantCard() {
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [expanded, setExpanded] = useState(false); // 👈 NEW
+  const [expanded, setExpanded] = useState(false);
 
   const search = async () => {
     if (!query.trim()) return;
@@ -34,7 +34,6 @@ export default function ResearchAssistantCard() {
   return (
     <Card title="Research Paper Assistant" color="purple">
 
-      {/* Expand / Collapse button */}
       <div className="flex justify-end mb-2">
         <button
           onClick={() => setExpanded(!expanded)}
@@ -44,7 +43,6 @@ export default function ResearchAssistantCard() {
         </button>
       </div>
 
-      {/* Search bar */}
       <div className="flex gap-2 mb-3">
         <Input
           placeholder="e.g. COVID-19 vaccine efficacy"
@@ -57,7 +55,6 @@ export default function ResearchAssistantCard() {
         </Button>
       </div>
 
-      {/* Loading skeleton */}
       {loading && (
         <div className="space-y-2 animate-pulse">
           {[...Array(4)].map((_, i) => (
@@ -66,7 +63,6 @@ export default function ResearchAssistantCard() {
         </div>
       )}
 
-      {/* Results section */}
       {result && !loading && (
         <div
           className={`

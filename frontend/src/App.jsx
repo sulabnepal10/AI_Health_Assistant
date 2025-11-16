@@ -10,6 +10,7 @@ import Privacy from './pages/Privacy';
 import { useState } from 'react';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
+import { StatsProvider } from './context/StatsContext';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -17,23 +18,25 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <ScrollToTop />
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex">
-          <Sidebar open={sidebarOpen} toggle={() => setSidebarOpen(s => !s)} />
-          <div className="flex-1 flex flex-col">
-            <Header toggleSidebar={() => setSidebarOpen(true)} />
-            <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Landing />} />
-                <Route path="/dashboard" element={<DashboardPage />} />
-                <Route path="/docs" element={<Docs />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/privacy" element={<Privacy />} />
-              </Routes>
-            </main>
-            <Footer />
+        <StatsProvider>
+          <ScrollToTop />
+          <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex">
+            <Sidebar open={sidebarOpen} toggle={() => setSidebarOpen(s => !s)} />
+            <div className="flex-1 flex flex-col">
+              <Header toggleSidebar={() => setSidebarOpen(true)} />
+              <main className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Landing />} />
+                  <Route path="/dashboard" element={<DashboardPage />} />
+                  <Route path="/docs" element={<Docs />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
           </div>
-        </div>
+        </StatsProvider>
       </BrowserRouter>
     </ThemeProvider>
   );

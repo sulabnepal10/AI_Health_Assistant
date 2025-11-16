@@ -12,16 +12,13 @@ export default function Sidebar({ open, toggle }) {
 
   return (
     <>
-      {/* Overlay */}
       {open && <div className="fixed inset-0 bg-black/50 lg:hidden z-40" onClick={toggle} />}
 
-      {/* Sidebar */}
       <aside
         className={`fixed lg:static inset-y-0 left-0 w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 transform transition-transform z-50 ${open ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
           }`}
       >
         <div className="relative flex flex-col items-center p-6 border-b dark:border-gray-700">
-          {/* Logo */}
           <Link to="/" className="mb-2">
             <img
               src="/logo.png"
@@ -30,7 +27,6 @@ export default function Sidebar({ open, toggle }) {
             />
           </Link>
 
-          {/* Close button on mobile */}
           <button onClick={toggle} className="lg:hidden absolute top-4 right-4">
             <X className="w-6 h-6 text-gray-700 dark:text-gray-300" />
           </button>

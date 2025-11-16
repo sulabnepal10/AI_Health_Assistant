@@ -34,7 +34,6 @@ export default function SymptomAdvisorCard() {
 
   return (
     <Card title="Symptom Advisor" color="green">
-      {/* Expand / Collapse button */}
       <div className="flex justify-end mb-2">
         <button
           onClick={() => setExpanded(!expanded)}
@@ -44,7 +43,6 @@ export default function SymptomAdvisorCard() {
         </button>
       </div>
 
-      {/* Chat area */}
       <div
         className={`
           overflow-y-auto border rounded p-2 mb-3 bg-gray-50 dark:bg-gray-800
@@ -65,7 +63,6 @@ export default function SymptomAdvisorCard() {
         )}
       </div>
 
-      {/* Input + Button */}
       <div className="flex gap-2">
         <Input
           placeholder="Describe your symptoms..."

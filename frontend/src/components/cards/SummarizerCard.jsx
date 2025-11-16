@@ -4,12 +4,14 @@ import Card from '../ui/Card';
 import Textarea from '../ui/Textarea';
 import Button from '../ui/Button';
 import { Copy, Check } from 'lucide-react';
+import { useStats } from '../context/StatsContext';
 
 export default function SummarizerCard() {
   const [text, setText] = useState('');
   const [summary, setSummary] = useState('');
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
+  const { incrementSummaryCount } = useStats();
 
   const summarize = async () => {
     if (!text.trim()) return;
@@ -17,6 +19,7 @@ export default function SummarizerCard() {
     try {
       const res = await axios.post('https://ai-health-assistant-cu2e.onrender.com/summarize', { text });
       setSummary(res.data.summary);
+      incrementSummaryCount();
     } catch {
       setSummary('Error: Could not connect to backend.');
     }

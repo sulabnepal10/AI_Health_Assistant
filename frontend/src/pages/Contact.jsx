@@ -5,7 +5,6 @@ export default function Contact() {
     return (
         <>
             <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-white">
-                {/* Hero */}
                 <section className="bg-gradient-to-br from-teal-600 to-cyan-700 py-20 text-white">
                     <div className="max-w-5xl mx-auto px-4 text-center">
                         <Mail className="w-16 h-16 mx-auto mb-4" />
@@ -18,7 +17,6 @@ export default function Contact() {
 
                 <section className="max-w-5xl mx-auto px-4 py-12">
                     <div className="grid md:grid-cols-2 gap-10">
-                        {/* Contact Info */}
                         <div>
                             <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
                             <div className="space-y-4">
@@ -46,7 +44,6 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        {/* Contact Form */}
                         <div>
                             <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                             <form className="space-y-4">

@@ -13,18 +13,15 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
-      {/* Hero */}
       <section className="pt-32 pb-48 px-4">
-        {/* Updated this container for 2-column layout */}
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-          
-          {/* Column 1: Text Content */}
+
           <div className="md:w-3/5 text-center md:text-left">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               AI-Powered Health Assistant
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Powered by LLaMA 3 
+              Powered by LLaMA 3
             </p>
             <Link
               to="/dashboard"
@@ -34,13 +31,9 @@ export default function Landing() {
             </Link>
           </div>
 
-          {/* Column 2: Image */}
           <div className="md:w-2/5 mt-12 md:mt-0">
             <img
-              // ==========================================================
-              // ====> UPDATE THIS SRC PATH to your downloaded image <====
-              // ==========================================================
-             src="/mock.png"
+              src="/mock.png"
               alt="AI Health Assistant"
               className="w-full h-auto max-w-sm md:max-w-md mx-auto"
             />
@@ -49,17 +42,16 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-20 px-4 bg-white dark:bg-gray-900"> {/* Removed text-white (was on parent) */}
+      <section className="py-20 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Core Capabilities</h2> {/* Added text color */}
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Core Capabilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((f, i) => (
               <div key={i} className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center">
                   <f.icon className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
                 </div>
-                {/* Added text color */}
+
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{f.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{f.desc}</p>
               </div>
@@ -68,7 +60,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 text-center">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Ready to Transform Healthcare?</h2> {/* Added text color */}

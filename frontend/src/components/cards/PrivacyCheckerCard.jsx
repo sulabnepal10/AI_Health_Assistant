@@ -4,12 +4,14 @@ import Card from '../ui/Card';
 import Textarea from '../ui/Textarea';
 import Button from '../ui/Button';
 import { Copy, Check, Loader2 } from 'lucide-react';
+import { useStats } from '../context/StatsContext';
 
 export default function PrivacyCheckerCard() {
   const [text, setText] = useState('');
   const [report, setReport] = useState(null);
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
+  const { incrementPhiCheckCount } = useStats();
 
   const check = async () => {
     if (!text.trim()) return;
@@ -17,6 +19,7 @@ export default function PrivacyCheckerCard() {
     try {
       const res = await axios.post('https://ai-health-assistant-cu2e.onrender.com/privacy', { text });
       setReport(res.data);
+      incrementPhiCheckCount();
     } catch {
       setReport({ error: 'Backend error' });
     } finally {

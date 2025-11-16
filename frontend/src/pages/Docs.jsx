@@ -5,7 +5,6 @@ export default function Docs() {
     return (
         <>
             <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-white">
-                {/* Hero */}
                 <section className="bg-gradient-to-br from-indigo-600 to-purple-700 py-20 text-white">
                     <div className="max-w-5xl mx-auto px-4 text-center">
                         <FileText className="w-16 h-16 mx-auto mb-4" />
@@ -19,7 +18,6 @@ export default function Docs() {
                 </section>
 
                 <article className="max-w-5xl mx-auto px-4 py-12 prose prose-lg dark:prose-invert">
-                    {/* ---------- Project Overview ---------- */}
                     <section className="mb-12">
                         <h2 className="flex items-center gap-2 text-3xl font-bold mb-4">
                             <span className="text-indigo-600">■</span> Project Overview
@@ -32,7 +30,6 @@ export default function Docs() {
                         </p>
                     </section>
 
-                    {/* ---------- Core Modules ---------- */}
                     <section className="mb-12">
                         <h2 className="flex items-center gap-2 text-3xl font-bold mb-4">
                             <span className="text-indigo-600">■</span> Core Modules
@@ -68,7 +65,6 @@ export default function Docs() {
                         </div>
                     </section>
 
-                    {/* ---------- System Architecture ---------- */}
                     <section className="mb-12">
                         <h2 className="flex items-center gap-2 text-3xl font-bold mb-4">
                             <span className="text-indigo-600">■■</span> System Architecture
@@ -112,7 +108,6 @@ export default function Docs() {
                         </div>
                     </section>
 
-                    {/* ---------- Tech Stack ---------- */}
                     <section className="mb-12">
                         <h2 className="flex items-center gap-2 text-3xl font-bold mb-4">
                             <span className="text-indigo-600">■</span> Tech Stack
@@ -135,7 +130,6 @@ export default function Docs() {
                         </ul>
                     </section>
 
-                    {/* ---------- Development Roadmap ---------- */}
                     <section className="mb-12">
                         <h2 className="flex items-center gap-2 text-3xl font-bold mb-4">
                             <span className="text-indigo-600">■</span> Development Roadmap
@@ -184,7 +178,6 @@ export default function Docs() {
                         </div>
                     </section>
 
-                    {/* ---------- Research Alignment ---------- */}
                     <section className="mb-12">
                         <h2 className="flex items-center gap-2 text-3xl font-bold mb-4">
                             <span className="text-indigo-600">■</span> Research Alignment
@@ -203,7 +196,6 @@ export default function Docs() {
                         </p>
                     </section>
 
-                    {/* ---------- Deliverables ---------- */}
                     <section className="mb-12">
                         <h2 className="flex items-center gap-2 text-3xl font-bold mb-4">
                             <span className="text-indigo-600">■</span> Deliverables
@@ -216,7 +208,6 @@ export default function Docs() {
                         </ol>
                     </section>
 
-                    {/* ---------- CTA ---------- */}
                     <section className="text-center py-10">
                         <a
                             href="https://github.com/sulabnepal10/"
