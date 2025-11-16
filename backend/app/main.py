@@ -53,28 +53,22 @@ def home():
 
 @app.post("/summarize")
 def summarize_text(data: SummarizeInput):
-    # We pass the input directly. The 'prompt' knows to
-    # assign it to the "input" variable.
-    result = summarizer_agent.invoke(data.text) # <-- New way
+    result = summarizer_agent.invoke(data.text)
     return {"summary": result.content}
 
 @app.post("/symptoms")
 def symptom_chat(data: SymptomInput):
     
-    # 1. Convert messages to a simple list of strings
     history_list = []
     for msg in data.messages:
         history_list.append(f"{msg.role}: {msg.content}")
 
-    # 2. Get the last message as the current question
     current_question = history_list.pop()
 
-    # 3. Join the rest of the history into a single string
     chat_history_str = "\n".join(history_list)
 
     print("--- SYMPTOM REQUEST RECEIVED ---") 
-    
-    # 4. Invoke the new agent
+
     result = symptom_advisor_agent.invoke({
         "chat_history": chat_history_str,
         "question": current_question
