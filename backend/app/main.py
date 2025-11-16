@@ -56,7 +56,7 @@ def summarize_text(data: SummarizeInput):
     # We pass the input directly. The 'prompt' knows to
     # assign it to the "input" variable.
     result = summarizer_agent.invoke(data.text) # <-- New way
-    return {"summary": result}
+    return {"summary": result.content}
 
 @app.post("/symptoms")
 def symptom_chat(data: SymptomInput):
@@ -82,7 +82,7 @@ def symptom_chat(data: SymptomInput):
 
     print("--- OLLAMA RESPONSE RECEIVED ---")
     
-    return {"response": result}
+    return {"response": result.content}
 
 @app.post("/papers")
 def research_papers(data: PaperInput):
