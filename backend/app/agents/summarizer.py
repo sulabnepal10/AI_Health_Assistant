@@ -4,7 +4,7 @@ from langchain_core.runnables import Runnable
 
 # 1. Initialize Ollama
 llm = ChatGroq(
-    model="llama3-8b-8192" 
+    model="llama3-8b" 
 )
 
 # 2. Prompt

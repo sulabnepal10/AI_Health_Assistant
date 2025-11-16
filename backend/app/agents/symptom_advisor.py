@@ -6,7 +6,7 @@ from langchain_core.runnables import Runnable
 
 # 1. Initialize model
 llm = ChatGroq(
-    model="llama3-8b-8192" # <--- CHANGED (use a specific model)
+    model="llama3-8b" # <--- CHANGED (use a specific model)
 )
 
 # 2. Prompt
