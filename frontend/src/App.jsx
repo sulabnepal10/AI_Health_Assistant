@@ -10,7 +10,7 @@ import Privacy from './pages/Privacy';
 import { useState } from 'react';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
-import { StatsProvider } from './context/StatsContext';
+import { StatsProvider } from './contenxt/StatsContext';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
