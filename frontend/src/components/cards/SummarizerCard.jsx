@@ -4,7 +4,7 @@ import Card from '../ui/Card';
 import Textarea from '../ui/Textarea';
 import Button from '../ui/Button';
 import { Copy, Check } from 'lucide-react';
-import { useStats } from '../context/StatsContext';
+import { useStats } from '../../contenxt/StatsContext';
 
 export default function SummarizerCard() {
   const [text, setText] = useState('');

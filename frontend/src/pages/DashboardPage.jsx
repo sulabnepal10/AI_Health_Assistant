@@ -1,6 +1,6 @@
 import Dashboard from '../components/Dashboard';
 import { Activity, AlertCircle, CheckCircle, Shield } from 'lucide-react';
-import { useStats } from '../context/StatsContext';
+import { useStats } from '../contenxt/StatsContext';
 
 export default function DashboardPage() {
   const { summaryCount, phiCheckCount } = useStats();
